@@ -1,0 +1,65 @@
+.color-picker-menu-container {
+   height: 60rem; // Tamaño del contenedor
+}
+
+.central-picker {
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  cursor: pointer;
+  z-index: 2;
+  transition: background-color 0.3s;
+  border-radius: 50%;
+  background: radial-gradient(circle, transparent, white);
+  transition: background 0.3s ease;
+  padding: 11px;
+
+}
+
+.menu-items-container {
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu-item {
+  position: absolute;
+  width: 6rem; // Tamaño de los círculos pequeños (el triple del tamaño original en rem)
+  height: 6rem; // Tamaño de los círculos pequeños (el triple del tamaño original en rem)
+  line-height: 6rem; // Alinear el texto verticalmente en el centro
+  text-align: center;
+  background: radial-gradient(circle, transparent, white); // Crear un gradiente radial para dar la ilusión de una burbuja
+  border-radius: 50%; // Hacer que el elemento sea completamente redondo
+  transition: transform 0.3s, opacity 0.3s;
+  cursor: pointer;
+  text-decoration: none;
+  transform-style: preserve-3d; // Mantener la orientación del texto
+  
+  &:hover {
+     background: radial-gradient(circle, transparent, rgb(121, 14, 214)); // Cambiar el color al pasar el mouse
+     text-decoration: none; // Quitar subrayado al pasar el mouse
+  }
+ }
+ 
+
+  .color-picker-menu-container.active  {
+    transform: translate(0) rotate(360deg); // Aplicar la animación cuando está activo
+    opacity: 1; // Mostrar los elementos cuando está activo
+    transition-delay: 0.1s; // Agregar un retraso a la animación para cada elemento
+  }
+
+  a {
+    writing-mode: horizontal-tb; // Change this line
+  }
+
+ 
+   
