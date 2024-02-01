@@ -39,7 +39,7 @@ const MainLayout = () => {
         <Route path="/Aprendizaje" element={<TransAprendizajeView />} />
         <Route path="/Madurativo" element={<TransMadurativoView />} />
       </Routes>
-      <Footer/>
+     
     </>
   );
   
