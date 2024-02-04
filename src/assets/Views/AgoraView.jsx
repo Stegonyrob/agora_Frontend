@@ -1,4 +1,4 @@
-import CardText from "../Components/Card/TextArea";
+import CardText from "../Components/Card/CardText";
 
 export default function AgoraView() {
   return (

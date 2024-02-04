@@ -1,13 +1,5 @@
 import { configureStore, createSlice } from '@reduxjs/toolkit';
-// import AboutMeView from '../Views/AboutMeView.jsx';
-// import NeurodiversityView from '../Views/NeurodiversityView.jsx';
-// import ServiceView from '../Views/ServiceView.jsx';
-// import ForoView from '../Views/ForoView.jsx';
-// import AgoraView from '../Views/AgoraView.jsx';
-// import TeaView from '../Views/TeaView.jsx';
-// import Tda_TdhView from '../Views/Tda_TdhView.jsx';
-// import TransAprendizajeView from '../Views/TransAprendizajeView.jsx';
-// import TransMadurativoView from '../Views/TransMadurativoView.jsx';
+
 
 const routes = {
  'Sobre mí': '/AboutMe',
@@ -21,17 +13,7 @@ const routes = {
  'Madurativo': '/Madurativo',
 };
 
-// const routeComponents = {
-//  '/AboutMe': AboutMeView,
-//  '/Neurodiversity': NeurodiversityView,
-//  '/Services': ServiceView,
-//  '/Foro': ForoView,
-//  '/Agora': AgoraView,
-//  '/Tea': TeaView,
-//  '/Tda_Tdh': Tda_TdhView,
-//  '/Aprendizaje': TransAprendizajeView,
-//  '/Madurativo': TransMadurativoView,
-// };
+
 
 const routeSlice = createSlice({
  name: 'route',

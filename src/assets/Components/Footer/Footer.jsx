@@ -6,7 +6,7 @@ import {
 export default function Footer() {
   return (
     <footer className="text-white-50 bg-dark text-center text-lg-start position-fixed bottom-0 w-100">
-     <div className="container p-1 pb-0">
+     <div className="container p-2 pb-2">
       <div className="row-auto d-flex justify-content-between align-items-center">
         
            <div>
