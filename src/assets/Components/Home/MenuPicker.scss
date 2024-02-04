@@ -18,7 +18,9 @@
   background: radial-gradient(circle, transparent, white);
   transition: background 0.3s ease;
   padding: 11px;
-
+  width: 15rem;
+  height: 15rem;
+  border-radius: 30rem;
 }
 
 .menu-items-container {
@@ -33,12 +35,12 @@
 
 .menu-item {
   position: absolute;
-  width: 6rem; // Tamaño de los círculos pequeños (el triple del tamaño original en rem)
-  height: 6rem; // Tamaño de los círculos pequeños (el triple del tamaño original en rem)
-  line-height: 6rem; // Alinear el texto verticalmente en el centro
+  width: 6rem;
+  height: 6rem; 
+  line-height: 6rem; 
   text-align: center;
-  background: radial-gradient(circle, transparent, white); // Crear un gradiente radial para dar la ilusión de una burbuja
-  border-radius: 50%; // Hacer que el elemento sea completamente redondo
+  background: radial-gradient(circle, transparent, white); 
+  border-radius: 50%; 
   transition: transform 0.3s, opacity 0.3s;
   cursor: pointer;
   text-decoration: none;

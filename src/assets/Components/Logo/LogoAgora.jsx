@@ -1,26 +1,40 @@
-
+import { useEffect, useRef } from 'react';
 import logo from '../../img/agoraLogo.png';
-
+import './Logo.scss'; 
 const Logo = () => {
- const logoStyle = {
-    width: '15rem',
-    height: '15rem',
-    borderRadius: '30rem',
-    position: 'relative' 
- };
+  const canvasRef = useRef(null);
 
+  useEffect(() => {
+    const canvas = canvasRef.current;
+    const context = canvas.getContext('2d');
 
- 
+    const handleMouseMove = (event) => {
+      const rect = canvas.getBoundingClientRect();
+      const offsetX = event.clientX - rect.left;
+      const offsetY = event.clientY - rect.top;
+      context.clearRect(0, 0, canvas.width, canvas.height);
+      context.font = '30px Arial';
+      context.fillText('Click Me!!!', offsetX, offsetY);
+    };
 
- 
+    canvas.addEventListener('mousemove', handleMouseMove);
 
- return (
-    <div >
-      <img style={logoStyle}src={logo} alt="Logo" />
-      
-      
+    return () => {
+      canvas.removeEventListener('mousemove', handleMouseMove);
+    };
+  }, []);
+
+  return (
+    <div className="logo-container">
+      <img className="logo-image" src={logo} alt="Logo" />
+      <canvas
+        ref={canvasRef}
+        width={300}
+        height={300}
+        className="logo-canvas"
+      />
     </div>
- );
+  );
 };
 
 export default Logo;

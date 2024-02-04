@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import './MenuPicker.scss'; // Archivo de estilos SCSS
+import './MenuPicker.scss'; 
 import Logo from '../Logo/LogoAgora';
 
 
@@ -35,7 +35,7 @@ const ColorPickerMenu = () => {
     style={{
       transform: `${transformStyle} rotate(${reverseDeg}deg)`,
       transitionDelay: `${index * 0.1}s`,
-      backgroundColor: colors[index % colors.length] // Selecciona un color de fondo del array
+      backgroundColor: colors[index % colors.length] 
     }}
   >
        {item.name}
