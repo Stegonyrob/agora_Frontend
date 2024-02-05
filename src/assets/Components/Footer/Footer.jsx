@@ -10,7 +10,7 @@ export default function Footer() {
       <div className="row-auto d-flex justify-content-between align-items-center">
         
            <div>
-             <a href="" className="me-4 text-reset" target="_blank" rel="noreferrer">
+             <a href="https://github.com/Stegonyrob/agora_frontend.git" className="me-4 text-reset" target="_blank" rel="noreferrer">
                <i className="bi bi-github"></i>
              </a>
              <a href="https://www.tiktok.com" className="me-4 text-reset" target="_blank" rel="noreferrer" >
