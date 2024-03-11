@@ -1,12 +1,15 @@
-// store.js
-import { configureStore } from '@reduxjs/toolkit';
-import imageReducer from './imageSlice';
+import { combineReducers } from 'redux';
+import textsReducer from './reducers/textsReducer';
+import postsReducer from './reducers/postsReducer';
+import replyTagsReducer from './reducers/replyTagsReducer';
+import usersReducer from './reducers/usersReducer';
 
-export default configureStore({
-  reducer: {
-    images: imageReducer,
-    addText: (state, action) => {
-      state.text.push(action.payload)}
-    // Otros reducers...
-  },
+const rootReducer = combineReducers({
+  texts: textsReducer,
+  posts: postsReducer,
+  replyTags: replyTagsReducer,
+  users: usersReducer,
 });
+
+export default rootReducer;
+

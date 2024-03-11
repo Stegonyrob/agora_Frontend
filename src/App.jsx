@@ -1,4 +1,8 @@
+// App.jsx
+import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { Provider } from 'react-redux';
+import store from './assets/stores/textStore';
 import HomeView from './assets/Views/HomeView';
 import AboutMeView from './assets/Views/AboutMeView';
 import NeurodiversityView from './assets/Views/NeurodiversityView';
@@ -13,19 +17,21 @@ import NavBar from './assets/Components/NavBar/NavBar';
 import Footer from './assets/Components/Footer/Footer';
 
 const App = () => {
-  return (
-    <Router>
-      <Routes>
-        <Route path="/" element={<HomeView />} />
-        <Route path="/*" element={<MainLayout />} />
-      </Routes>
-      <Footer/>
-    </Router>
-  );
+ return (
+    <Provider store={store}>
+      <Router>
+        <Routes>
+          <Route path="/" element={<HomeView />} />
+          <Route path="/*" element={<MainLayout />} />
+        </Routes>
+        <Footer/>
+      </Router>
+    </Provider>
+ );
 };
 
 const MainLayout = () => {
-  return (
+ return (
     <>
       <NavBar />
       <Routes>
@@ -39,10 +45,8 @@ const MainLayout = () => {
         <Route path="/Aprendizaje" element={<TransAprendizajeView />} />
         <Route path="/Madurativo" element={<TransMadurativoView />} />
       </Routes>
-     
     </>
-  );
-  
+ );
 };
 
 export default App;
