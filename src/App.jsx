@@ -1,24 +1,23 @@
-// App.jsx
-import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { Provider } from 'react-redux';
-import store from './assets/stores/textStore';
-import HomeView from './assets/Views/HomeView';
+
+import { Route, BrowserRouter as Router, Routes } from 'react-router-dom';
+import Footer from './assets/Components/Footer/Footer';
+import NavBar from './assets/Components/NavBar/NavBar';
 import AboutMeView from './assets/Views/AboutMeView';
-import NeurodiversityView from './assets/Views/NeurodiversityView';
-import ServiceView from './assets/Views/ServiceView';
-import ForoView from './assets/Views/ForoView';
 import AgoraView from './assets/Views/AgoraView';
-import TeaView from './assets/Views/TeaView';
+import ForoView from './assets/Views/ForoView';
+import HomeView from './assets/Views/HomeView';
+import LoginView from './assets/Views/LoginView';
+import NeurodiversityView from './assets/Views/NeurodiversityView';
+import RegisterView from './assets/Views/RegisterView';
+import ServiceView from './assets/Views/ServiceView';
 import Tda_TdhView from './assets/Views/Tda_TdhView';
+import TeaView from './assets/Views/TeaView';
 import TransAprendizajeView from './assets/Views/TransAprendizajeView';
 import TransMadurativoView from './assets/Views/TransMadurativoView';
-import NavBar from './assets/Components/NavBar/NavBar';
-import Footer from './assets/Components/Footer/Footer';
 
 const App = () => {
  return (
-    <Provider store={store}>
+  
       <Router>
         <Routes>
           <Route path="/" element={<HomeView />} />
@@ -26,7 +25,7 @@ const App = () => {
         </Routes>
         <Footer/>
       </Router>
-    </Provider>
+    
  );
 };
 
@@ -44,6 +43,8 @@ const MainLayout = () => {
         <Route path="/Tda_Tdh" element={<Tda_TdhView />} />
         <Route path="/Aprendizaje" element={<TransAprendizajeView />} />
         <Route path="/Madurativo" element={<TransMadurativoView />} />
+        <Route path="/Login" element={<LoginView />} />
+        <Route path="/Register" element={<RegisterView />} />
       </Routes>
     </>
  );

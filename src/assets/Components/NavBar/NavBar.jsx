@@ -18,6 +18,8 @@ function NavBar() {
               <NavDropdown.Item href="/Madurativo">Transtornos Madurativos</NavDropdown.Item>
             </NavDropdown>
             <Nav.Link href="/AboutMe">Sobre Mi</Nav.Link>
+            <Nav.Link href="/Login">Login</Nav.Link>
+            <Nav.Link href="/Register">Registro</Nav.Link>
             <Nav.Link href="/Foro">Foro</Nav.Link>
              </Nav>
         </Navbar.Collapse>
