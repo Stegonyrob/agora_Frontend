@@ -1,6 +1,6 @@
 import { useEffect, useRef } from 'react';
-import logo from '../../img/agoraLogo.png';
-import './Logo.scss'; 
+import logo from '../../../../public/images/agoraLogo.png';
+import './Logo.scss';
 const Logo = () => {
   const canvasRef = useRef(null);
 

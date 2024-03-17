@@ -1,5 +1,6 @@
 
 import { Route, BrowserRouter as Router, Routes } from 'react-router-dom';
+import './App.scss';
 import Footer from './assets/Components/Footer/Footer';
 import NavBar from './assets/Components/NavBar/NavBar';
 import AboutMeView from './assets/Views/AboutMeView';
@@ -14,7 +15,7 @@ import Tda_TdhView from './assets/Views/Tda_TdhView';
 import TeaView from './assets/Views/TeaView';
 import TransAprendizajeView from './assets/Views/TransAprendizajeView';
 import TransMadurativoView from './assets/Views/TransMadurativoView';
-
+import './assets/scss/reset.scss';
 const App = () => {
  return (
   

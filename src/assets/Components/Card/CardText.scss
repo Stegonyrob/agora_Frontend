@@ -1,0 +1,16 @@
+.cardText{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:center;
+    margin-bottom: 5rem;
+    width: 95% !important;
+    margin: 2rem !important;
+    text-align: justify ;
+    img{
+        width: 100%;
+        max-width: 15rem;
+        float: left;
+        margin: 2rem;
+      
+    }
+}
